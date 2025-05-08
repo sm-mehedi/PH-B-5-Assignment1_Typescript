@@ -36,8 +36,8 @@ if (typeof data === "string") {
   console.log("Your ID is: " + id);
 }
 
-printId(101);       // ✅ number
-printId("abc123");  // ✅ string
+printId(22489833);       // ✅ number
+printId("22-48983-3");  // ✅ string
 </code></pre>
 
 <p><strong>Intersection Type</strong> denoted by <code>&</code></p>
