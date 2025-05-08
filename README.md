@@ -37,7 +37,7 @@ if (typeof data === "string") {
 }
 
 printId(22489833);       // ✅ number
-printId("22-48983-3");  // ✅ string
+printId("22489833");  // ✅ string
 </code></pre>
 
 <p><strong>Intersection Type</strong> denoted by <code>&</code></p>
