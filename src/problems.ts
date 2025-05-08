@@ -102,7 +102,33 @@ import { Constructor } from './../node_modules/make-error/index.d';
     console.log(processValue("hello")); 
     console.log(processValue(10));
 
-    
+
+
+    interface Product {
+        name: string;
+        price: number;
+      }
+      const products = [
+        { name: "Pen", price: 10 },
+        { name: "Notebook", price: 25 },
+        { name: "Bag", price: 50 }
+      ];
+      
+      function getMostExpensiveProduct(products: Product[]): Product | null{
+        if(products.length  == 0){
+            return null;
+        }
+        else{
+            return products.reduce((maxProduct, currentProduct) => {
+                return currentProduct.price > maxProduct.price ? currentProduct : maxProduct;
+              });
+        }
+      }
+      console.log(getMostExpensiveProduct(products));
+
+      
+
+
 
 
 
