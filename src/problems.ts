@@ -140,12 +140,29 @@ import { Constructor } from './../node_modules/make-error/index.d';
         if (day === Day.Sunday) {
           return "Weekend";
         }
-        return "Weekday";
+        else{
+            return "Weekday";
+        }
       }
       console.log(getDayType(Day.Monday));
       console.log(getDayType(Day.Sunday));
 
+      async function squareAsync(n: number): Promise<number> {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (n < 0) {
+              reject(new Error("Negative number not allowed"));
+            } else {
+              resolve(n * n);
+            }
+          }, 1000); 
+        });
+      }
+      squareAsync(4).then(console.log);        
+      squareAsync(-3).catch(console.error);   
       
+
+
 
 
 
