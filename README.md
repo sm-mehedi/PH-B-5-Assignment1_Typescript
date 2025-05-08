@@ -25,6 +25,7 @@ if (typeof data === "string") {
   throw new Error("Something went wrong");
 }
 </code></pre>
+<p><em><strong>Summary:</strong> <code>any</code> bypasses type safety, <code>unknown</code> enforces type checks before usage, and <code>never</code> is for unreachable code or functions that don't return.</em></p>
 
 <hr/>
 
