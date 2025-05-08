@@ -1,5 +1,5 @@
 import { Constructor } from './../node_modules/make-error/index.d';
-{
+
     function formatString(input: string, toUpper?: boolean): string {
         if (toUpper || toUpper == undefined) {
             return input.toUpperCase()
@@ -11,18 +11,21 @@ import { Constructor } from './../node_modules/make-error/index.d';
     }
    
 
+    
    
 
       function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
         return items.filter(item => item.rating >= 4);
       }
       
+
      
 
       function concatenateArrays<T>(...arrays: T[][]): T[]{
               return ([] as T[]).concat(...arrays);
       }
        
+
 
 
       class Vehicle {
@@ -110,6 +113,8 @@ import { Constructor } from './../node_modules/make-error/index.d';
       }
       
 
+
+
       enum Day {
         Monday,
         Tuesday,
@@ -130,6 +135,8 @@ import { Constructor } from './../node_modules/make-error/index.d';
       }
       
 
+
+
       async function squareAsync(n: number): Promise<number> {
         return new Promise((resolve, reject) => {
           setTimeout(() => {
@@ -143,23 +150,8 @@ import { Constructor } from './../node_modules/make-error/index.d';
       }
       
       
+      
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
