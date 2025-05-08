@@ -87,7 +87,24 @@ import { Constructor } from './../node_modules/make-error/index.d';
        myCar.getModel(); 
 
 
-       
+       function processValue(value: string | number): number{
+        if(typeof value=="string"){
+            return value.length;
+        }
+        else if(typeof value == 'number'){
+            return value*2;
+
+        }
+        else{
+            return 0;
+        }
+       }
+    console.log(processValue("hello")); 
+    console.log(processValue(10));
+
+    
+
+
 
 
 
