@@ -126,7 +126,28 @@ import { Constructor } from './../node_modules/make-error/index.d';
       }
       console.log(getMostExpensiveProduct(products));
 
+      enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+      }
       
+      function getDayType(day: Day): string {
+        if (day === Day.Sunday) {
+          return "Weekend";
+        }
+        return "Weekday";
+      }
+      console.log(getDayType(Day.Monday));
+      console.log(getDayType(Day.Sunday));
+
+      
+
+
 
 
 
