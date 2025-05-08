@@ -1,3 +1,4 @@
+import { Constructor } from './../node_modules/make-error/index.d';
 {
     function formatString(input: string, toUpper?: boolean): string {
         if (toUpper || toUpper == undefined) {
@@ -29,6 +30,64 @@
       }
       console.log(concatenateArrays(["a", "b"], ["c"]));   
       console.log(concatenateArrays([1, 2], [3, 4], [5]));    
+
+
+      class Vehicle {
+        private make: string;
+        private year: number;
+      
+        constructor(make: string, year: number) {
+          this.make = make;
+          this.year = year;
+        }
+      
+        get Make(): string {
+          return this.make;
+        }
+      
+        set Make(value: string) {
+          this.make = value;
+        }
+      
+        get Year(): number {
+          return this.year;
+        }
+      
+        set Year(value: number) {
+          this.year = value;
+        }
+      
+        getInfo(): void {
+          console.log(`Make: ${this.make}, Year: ${this.year}`);
+        }
+      }
+      
+      class Car extends Vehicle {
+        private model: string;
+      
+        constructor(make: string, year: number, model: string) {
+          super(make, year);
+          this.model = model;
+        }
+      
+        get Model(): string {
+          return this.model;
+        }
+      
+        set Model(value: string) {
+          this.model = value;
+        }
+      
+        getModel(): void {
+          console.log(`Model: ${this.model}`);
+        }
+      }
+      const myCar = new Car("Toyota", 2020, "Corolla");
+       myCar.getInfo();  
+       myCar.getModel(); 
+
+
+       
 
 
 
